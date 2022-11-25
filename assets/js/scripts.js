@@ -1,3 +1,4 @@
+// CREATED BY ODELOLA
 // Get All DOM Elements
 const html = document.querySelector('html');
 const universalCursor = document.querySelector('#universal-cursor');
@@ -27,23 +28,14 @@ allSquares.map(item => {
         morphingCursor.style.clipPath = clipPaths[item.classList["1"].replace("square-", "")]
         item.removeEventListener("mouseover", (e) => { })
     })  
-    cursorSquareCircle.addEventListener("mouseover", (e) => {
-        html.classList.remove("hidden-cursor");
-        morphingCursor.style.display = "none";
-        console.log("mallam")
-    })
-    cursorSquareCircle.addEventListener("mouseleave", (e) => {
-        html.classList.add("hidden-cursor");
-        morphingCursor.style.display = "initial";
-        console.log("mallam2")
-    })
-
-
-
-    console.log(morphingCursor.style["clip-path"])
-
-
-
+    
 })
-console.log(allSquares)
-// console.log(cursorSquares[ ])
+// Implement the inner square functionality
+cursorSquareCircle.addEventListener("mouseover", (e) => {
+    html.classList.remove("hidden-cursor");
+    morphingCursor.style.display = "none";
+})
+cursorSquareCircle.addEventListener("mouseleave", (e) => {
+    html.classList.add("hidden-cursor");
+    morphingCursor.style.display = "initial";
+})
